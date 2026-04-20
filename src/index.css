@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Playfair Display', serif;
+
+  --color-harvest-beige: #F5F2ED;
+  --color-harvest-green: #2D4030;
+  --color-harvest-olive: #5A5A40;
+  --color-harvest-accent: #C16E3E; /* Terracotta-like */
+  --color-harvest-ink: #1A1A1A;
+}
+
+@layer base {
+  body {
+    @apply bg-harvest-beige text-harvest-ink font-sans;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+.glass-card {
+  @apply bg-white/40 backdrop-blur-md border border-white/20;
+}
+
+.btn-primary {
+  @apply bg-harvest-green text-white px-8 py-4 rounded-full font-medium transition-all hover:bg-harvest-olive hover:scale-105 active:scale-95 shadow-lg;
+}
+
+.btn-secondary {
+  @apply border-2 border-harvest-green text-harvest-green px-8 py-4 rounded-full font-medium transition-all hover:bg-harvest-green hover:text-white hover:scale-105 active:scale-95;
+}
+
+.section-padding {
+  @apply py-20 px-6 sm:px-12 lg:px-24;
+}
